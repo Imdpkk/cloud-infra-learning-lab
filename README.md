@@ -175,6 +175,8 @@ This proves Terraform was the source of truth, not the console.
 Upload screenshots in this exact order in your repo:
 
 AWS Console – Manual EC2 Running
+![Uploading terraform-apply.png…]()
+
 
 Terraform Init Success
 
