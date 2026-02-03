@@ -1,0 +1,55 @@
+# ☁️ AWS EC2 Provisioning — Manual & Terraform  
+**DevOps Internship | Task-2 Documentation**  
+**Author:** Deepak Vishwakarma  
+**GitHub Repo:** https://github.com/Imdpkk/cloud-infra-learning-lab
+
+---
+
+## 🧠 Objective
+
+The purpose of this task was to learn and demonstrate:
+
+- AWS core compute concepts  
+- Launching an EC2 instance manually in the AWS Console  
+- Provisioning infrastructure using Terraform (Infrastructure as Code)  
+- Understanding the lifecycle of cloud infrastructure (create → verify → destroy)  
+- Documenting the process in a clear, professional manner
+
+---
+
+## 🛠️ Tools Used
+
+| Tool | Purpose |
+|------|---------|
+| AWS EC2 | Cloud compute service |
+| Terraform | Infrastructure as Code |
+| PowerShell | CLI execution |
+| Git & GitHub | Version control & submission |
+
+---
+
+## 🧱 Part 1 — Manual EC2 Launch
+
+### Steps
+1. Logged into the AWS Management Console  
+2. Navigated to **EC2 → Launch Instances**  
+3. Selected:
+   - **AMI:** Ubuntu Server 24.04 LTS  
+   - **Instance type:** t3.micro (Free Tier)  
+4. Created a new key pair (`manual-ec2-key`)  
+5. Configured a security group allowing SSH (port 22) from my IP  
+6. Launched the instance  
+7. Verified the instance is running and has a Public IP
+
+---
+
+## 🧪 Part 2 — Terraform EC2 Provisioning
+
+### Terraform Configuration
+
+#### `provider.tf`
+
+```hcl
+provider "aws" {
+  region = "us-east-1"
+}
